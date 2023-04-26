@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.InstructorGraphController">
+   <children>
+      <Label text="Team Average" textFill="#8151e1">
+         <font>
+            <Font name="Yu Gothic Regular" size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+      </Label>
+      <LineChart fx:id="lineGraph" minHeight="300.0" prefHeight="399.0" prefWidth="1000.0">
+        <xAxis>
+          <CategoryAxis fx:id="yAxis" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Team's Average Energy %" side="LEFT" fx:id="xAxis" />
+        </yAxis>
+      </LineChart>
+      <Label textFill="#96691f">
+         <font>
+            <Font name="Yu Gothic Regular" size="19.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="10.0" top="30.0" />
+         </VBox.margin>
+      </Label>
+      <AnchorPane prefHeight="211.0" prefWidth="1000.0">
+         <children>
+            <Button fx:id="returnButton" layoutX="500.0" layoutY="17.0" mnemonicParsing="false" onAction="#returnToMainMenu" text="Return to Main Menu">
+               <font>
+                  <Font name="Arial" size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
